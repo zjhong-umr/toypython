@@ -1,0 +1,4 @@
+def foo(x y) x+y;
+def foo2(a b) a*foo(a,b);
+foo2(4,6)
+foo(5, 5)

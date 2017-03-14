@@ -1,0 +1,15 @@
+; ModuleID = 'test/assignTest.txt'
+
+define i32 @main() {
+entry:
+  %x = alloca i32
+  store i32 1, i32* %x
+  %y = alloca i32
+  store i32 2, i32* %y
+  %z = alloca i32
+  store i32 4, i32* %z
+  %v = alloca i32
+  store i32 6, i32* %v
+  %x1 = alloca i32
+  ret i32* %x1
+}

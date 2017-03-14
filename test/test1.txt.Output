@@ -1,0 +1,24 @@
+; ModuleID = 'test/test1.txt'
+
+define i32 @foo(i32 %x, i32 %y) {
+entry:
+  %addtmp = add i32 %x, %y
+  ret i32 %addtmp
+}
+
+define i32 @foo2(i32 %a, i32 %b) {
+entry:
+  %calltmp = call i32 @foo(i32 %a, i32 %b)
+  %multmp = mul i32 %a, %calltmp
+  ret i32 %multmp
+}
+
+define i32 @main() {
+entry:
+  %calltmp = call i32 @foo2(i32 4, i32 6)
+  ret i32 %calltmp
+
+entry1:                                           ; No predecessors!
+  %calltmp2 = call i32 @foo(i32 5, i32 5)
+  ret i32 %calltmp2
+}
