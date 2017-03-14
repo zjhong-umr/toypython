@@ -14,7 +14,7 @@ make all
 
 Generate from toypython source code
 ```
-./toypython yoursourcefile
+./toypython yoursourcefilepath
 ```
 
 Execute your program from LLVM IR and print the result
